@@ -1,10 +1,10 @@
 class Gestore {
     public static void main(String[] args) {
-        ContoCorrente[] conti = new ContoCorrente[3];
+        ContoCorrenteDynamic[] conti = new ContoCorrenteDynamic[3];
 
-        conti[0] = new ContoCorrente(445738, 2000);
-        conti[1] = new ContoCorrente(9998, 34);
-        conti[2] = new ContoCorrente(100029, 0);
+        conti[0] = new ContoCorrenteDynamic(445738, 2000);
+        conti[1] = new ContoCorrenteDynamic(9998, 34);
+        conti[2] = new ContoCorrenteDynamic(100029, 0);
 
         conti[0].prelievo(100);
         conti[0].prelievo(150);
