@@ -10,10 +10,12 @@ public class Main {
     public Main() {
         JFrame frame = new JFrame("Omino");
 
+        //Window placement and size
         frame.setSize(400, 350);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
 
+        //Add omino
         Omino omino;
         if (abilitaEstensioni) {
             OminoBello ominobello = new OminoBello();
@@ -27,10 +29,9 @@ public class Main {
         } else {
             omino = new Omino();
         }
-
-
         frame.add(omino);
 
+        //Show window
         frame.setVisible(true);
     }
 }

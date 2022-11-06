@@ -15,8 +15,6 @@ public class Omino extends JPanel {
     private double leg_angle = -70 * Math.PI / 180;
 
     public void paint(Graphics g) {
-        super.paint(g);
-
         Graphics2D g2 = (Graphics2D)g;
         
         Dimension parent_size = getParent().getSize();
