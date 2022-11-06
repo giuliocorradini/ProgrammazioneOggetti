@@ -2,6 +2,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Main {
+    private static final Boolean abilitaEstensioni = true;
+
     public static void main(String args[]) {
         new Main();
     }
@@ -9,12 +11,26 @@ public class Main {
     public Main() {
         JFrame frame = new JFrame("Omino");
 
-        JPanel omino = new Omino();
-        frame.add(omino);
-
-        frame.setSize(400, 600);
+        frame.setSize(400, 350);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
+
+        Omino omino;
+        if (abilitaEstensioni) {
+            OminoBello ominobello = new OminoBello();
+            ominobello.addAccessorio(Accessorio.OCCHI);
+            ominobello.addAccessorio(Accessorio.NASO);
+            ominobello.addAccessorio(Accessorio.BOCCA);
+            ominobello.addAccessorio(Accessorio.CAPPELLO);
+            ominobello.addAccessorio(Accessorio.OMBRELLO);
+
+            omino = ominobello;
+        } else {
+            omino = new Omino();
+        }
+
+
+        frame.add(omino);
 
         frame.setVisible(true);
     }
