@@ -1,3 +1,5 @@
+import java.util.Timer;
+
 import javax.swing.JFrame;
 
 public class Main {
@@ -30,6 +32,10 @@ public class Main {
             omino = new Omino();
         }
         frame.add(omino);
+
+        Timer timer = new Timer();
+        Animazione anim = new Animazione(omino);
+        timer.scheduleAtFixedRate(anim, 0, 1000 / 60);
 
         //Show window
         frame.setVisible(true);

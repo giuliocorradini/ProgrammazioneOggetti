@@ -14,15 +14,17 @@ public class Omino extends JPanel {
     private static final double leg = 100;      //hypotenuse
     private double leg_angle = -70 * Math.PI / 180;
 
+    private int xoff;
+    private int yoff = 30;
+
     public void paint(Graphics g) {
         Graphics2D g2 = (Graphics2D)g;
         
         Dimension parent_size = getParent().getSize();
         scale = parent_size.height / base_unit;
-        g.translate((int)(parent_size.width / 2), 30);
         g2.scale(scale, scale);
-        g.translate((int)(-head / 2), 0);   //perché questa va fatta dopo lo scaling?
 
+        g.translate(xoff, yoff);
 
         // Testa
         g.drawOval(0, 0, (int)(head), (int)(head));
@@ -98,5 +100,21 @@ public class Omino extends JPanel {
 
     public void setLeg_angle(double leg_angle) {
         this.leg_angle = leg_angle;
+    }
+
+    public void setXoff(int x) {
+        xoff = x;
+    }
+
+    public void setYoff(int y) {
+        yoff = y;
+    }
+
+    public int getXoff() {
+        return xoff;
+    }
+
+    public int getYoff() {
+        return yoff;
     }
 }
