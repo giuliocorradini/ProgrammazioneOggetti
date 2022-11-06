@@ -10,9 +10,9 @@ public class Omino extends JPanel {
     private static final double head = 70;     //x & y
     private static final double body = 100;    //y
     private static final double arm = 50;      //hypotenuse
-    private double arm_angle = -30 * Math.PI / 180;
+    private double arm_angle = Radians.fromDegs(-30);
     private static final double leg = 100;      //hypotenuse
-    private double leg_angle = -70 * Math.PI / 180;
+    private double leg_angle = Radians.fromDegs(-70);
 
     private int xoff;
     private int yoff = 30;

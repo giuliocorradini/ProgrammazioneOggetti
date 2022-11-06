@@ -39,7 +39,7 @@ public class OminoBello extends Omino {
 
         AffineTransform ombrello_rot = new AffineTransform();
         ombrello_rot.translate(20, 5);
-        ombrello_rot.rotate(Math.PI * 30 / 180, 54, 113);
+        ombrello_rot.rotate(Radians.fromDegs(30), 54, 113);
 
         for(Accessorio a: Accessorio.values()) {
             if(accessori[a.ordinal()]) {
